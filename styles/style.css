@@ -1,0 +1,148 @@
+/* Title Section */
+
+#title{
+  padding: 2%;
+  text-align: center;
+  font-family: 'Handlee',cursive;
+  color: white;
+  background-color: #FF6B6B;
+}
+.h1{
+  font-size: 3rem;
+}
+.custom-icon{
+  width: 15%;
+  color: white;
+  height: 15%;
+  margin-top: 5px;
+  padding-top: 1%;
+}
+
+/* Pads Section */
+#pads{
+  padding: 3% 10%;
+}
+.padcol{
+  text-align: center;
+}
+.square{
+  position: relative;
+  width: 100px;
+  text-align:center;
+  height: 120px;
+  padding: 4%;
+  margin-bottom: 2%;
+  font-size: 12px;
+  border: 3px solid #FF6B6B;
+  background-color: white;
+}
+.customrow{
+  align-items: center;
+  margin:0;
+}
+.square-buttons{
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+}
+.btn-square{
+  height: 100%;
+  padding-top: 10%;
+  align-items: center;
+  padding:5%;
+  margin-left: 5%;
+}
+.greenicon{
+  color: green;
+}
+.redicon{
+  color: red;
+}
+.roundbtn{
+  border-radius: 50px;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+#playAllBtn .fa-play-circle:hover{
+  color:white;
+}
+/* Responsiveness to different sizes of screens */
+@media (max-width:500px){
+  #pads{
+  }
+  .btn-square{
+    position: relative;
+    right: 15%;
+    left: 15%;
+  }
+  .padcol{
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2%;
+  }
+}
+@media (min-width:790px) and (max-width:1280px) {
+  .square{
+    width: 120px;
+    padding:5%;
+    height: 80px;
+  }
+}
+@media (min-width:725px) and (max-width:780px) {
+  .square{
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width:780px) {
+  .square{
+    width: 100px;
+    height: 100px;
+  }
+}
+/* Recording Section */
+#recording-section{
+  text-align: center;
+  font-family: 'Handlee',cursive;
+  margin-top: 2%;
+  padding: 3%;
+  color: white;
+  text-align: center;
+  background-color:#FF6B6B;
+}
+.recordbtnclass{
+  margin-right: 1%;
+  margin-left: 1%;
+}
+.h1 #recording-section{
+  margin-bottom: 1%;
+  font-size: 3rem;
+}
+#recordStart .fa-record-vinyl:hover{
+  color:white;
+}
+#playRecording .fa-play-circle:hover{
+  color:white;
+}
+.record-btn-center{
+  margin:2%;
+  text-align: center;
+  padding: 6px 2px;
+  line-height: 1.428571429;
+}
