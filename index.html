@@ -6,13 +6,11 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/7044b8920d.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Caveat+Brush&display=swap" rel="stylesheet">
     <!-- CSS Connection -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- JavaScript Connection -->
-    <script src="/path/to/howler.js"></script>
-    <script src="javascript/js.js" type="text/javascript">
-    </script>
+    <script src="javascript/js.js" type="text/javascript"></script>
     <!-- Bootstrap Connection -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -21,8 +19,8 @@
   </head>
 
 
-
-  <body>
+<!-- Used style in here only due to Bootstrap overiding the body background-color element. -->
+  <body style="background-color:#E8F6EF">
 
   <!-- TITLE SECTION -->
 <section id="title">
@@ -34,6 +32,9 @@
 
 <!-- PADS SECTION -->
 <!-- Optimized for most screen sizes , Still Ui upgrades needed on the cards.-->
+<section id="filler">
+
+<!-- Every square is optimized for multiple screen sizes for optimal user experience. -->
 <section id="pads">
   <div class="row">
     <div class="padcol col-lg-1 col-md-3 col-sm-4 col-4">
@@ -43,7 +44,7 @@
             <button id="Button1" onclick="addToList1()"type="button" class="btn btn-outline-success btn-sm">On</button>
             <button onclick="stop1()"type="button" class="btn btn-outline-danger btn-sm">Off</button>
           </div>
-          <audio onended="playAudios()" id="Audio1" src="loops/bass_funky_grove.mp3"></audio>
+          <audio  onended="playAudios()" id="Audio1" src="loops/bass_funky_grove.mp3"></audio>
       </div>
     </div>
     <div class="padcol col-lg-1 col-md-3 col-sm-4 col-4">
@@ -126,16 +127,14 @@
           <audio onended="playAudios()"id="Audio9"src="loops/Pas3Groove.mp3"></audio>
       </div>
     </div>
-    <div class="centericons padcol col-lg-2 col-md-3 col-sm-12 col-12">
-      <div class="btn-square row customrow">
-        <div class="col col-sm-6">
-          <!-- I'm going to add pause icon when the play button is already clicked. -->
-          <button id="playAllBtn" onclick="playAudios()"type="button" class="btn-circle btn btn-lg btn-outline-success btn-md"><i class="greenicon far fa-play-circle"></i></button>
+    <div class="centericons padcol col-lg-2 col-md-12 col-sm-12 col-12">
+      <div class="btn-square row">
+        <!-- This section takes more grid space when used on lower screen width. -->
+        <div class="col col-sm-6 col-md-5">
+          <button id="playAllBtn" onclick="playAudios()"type="button" class="btn-circle btn btn-lg btn-outline-success btn-md"><i id="icon-playall" class="greenicon far fa-play-circle"></i></button>
         </div>
-        <div class="col col-sm-6">
+        <div class="col col-sm-6 col-md-5">
           <button id="stopAllBtn" onclick="stopAudios()" type="button" class="btn-circle btn btn-lg btn-outline-danger "><i class="far fa-stop-circle"></i></button>
-        </div>
-        <div class="col">
         </div>
       </div>
     </div>
@@ -144,22 +143,19 @@
 </section>
 
 <section id="recording-section">
+  <!-- Recording Section - Everything related to recording the audio from the web and displaying it. -->
   <h1>Record</h1>
-  <!-- Here I'll implement the recorded audio section and allow saving of one or more preset recorded audios. -->
-  <audio id="recordedaudio"src="">
 
+  <audio id="recordedaudio"src="">
+  <!-- Here I'll implement the recorded audio section and allow saving of one or more preset recorded audios. -->
   </audio>
+
   <!-- Recording Btns Section -->
 <div class="recordBtns">
-      <button id="recordStart" type="button" class="record-btn-center btn btn-lg btn-outline-danger"><i class="redicon redicon fas fa-record-vinyl"></i></button>
-      <button id="playRecording" type="button" class="record-btn-center btn btn-lg btn-outline-success"><i class="greenicon far fa-play-circle"></i></button>
+      <button onclick="btnrecordAudio()" id="recordStart" type="button" class="record-btn-center btn btn-lg btn-outline-danger"><i id="rec-icon" class="redicon fas fa-record-vinyl"></i></button>
+      <audio  id="recording" ></audio>
 </div>
 
-<!-- Section for loading the recorded audios. -->
-  <section class="sound-clips">
-</div>
-
-  </section>
 </section>
 
   </body>
